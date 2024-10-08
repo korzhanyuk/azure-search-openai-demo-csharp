@@ -109,7 +109,7 @@ public sealed partial class AzureSearchEmbedService(
         return true;
     }
 
-    public async Task CreateSearchIndexAsync(string searchIndexName, CancellationToken ct = default)    
+    public async Task CreateSearchIndexAsync(string searchIndexName, CancellationToken ct = default)
     {
         string vectorSearchConfigName = "my-vector-config";
         string vectorSearchProfile = "my-vector-profile";
@@ -129,7 +129,7 @@ public sealed partial class AzureSearchEmbedService(
             Fields =
             {
                 new SimpleField("id", SearchFieldDataType.String) { IsKey = true },
-                new SearchableField("content") { AnalyzerName = LexicalAnalyzerName.EnMicrosoft },
+                new SearchableField("content") { AnalyzerName = LexicalAnalyzerName.UkMicrosoft },
                 new SimpleField("category", SearchFieldDataType.String) { IsFacetable = true },
                 new SimpleField("sourcepage", SearchFieldDataType.String) { IsFacetable = true },
                 new SimpleField("sourcefile", SearchFieldDataType.String) { IsFacetable = true },

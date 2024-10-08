@@ -128,7 +128,8 @@ param searchIndexName string = 'gptkbindex'
 param searchServiceName string = ''
 
 @description('Location of the resource group for the Azure AI Search service')
-param searchServiceResourceGroupLocation string = location
+//param searchServiceResourceGroupLocation string = location
+param searchServiceResourceGroupLocation string = 'westeurope'
 
 @description('Name of the resource group for the Azure AI Search service')
 param searchServiceResourceGroupName string = ''
